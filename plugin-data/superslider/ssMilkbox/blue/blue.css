@@ -1,0 +1,86 @@
+/* MILKBOX */
+
+#mbOverlay {
+	position: absolute;
+	left: 0;
+	width:100%;
+	background-color: #1f3d57; /* set the Milkbox overlay color // opacity: see the js options */
+	z-index:1000;
+	cursor: pointer;
+}
+
+#mbCenter {
+	/* for default width and height, see the js options */
+	position: absolute;
+	z-index:1001;
+	overflow:hidden;
+	left: 50%;
+	top:10%;/* overwritten in the js options to properly position the milkbox when activated in a scrolled window */
+	background-color: #4384ba;/* set the Milkbox background color */
+	border: 8px solid #305d85;/* set the Milkbox border */
+	margin:0; padding:5px;
+}
+
+.mbLoading{ background: #fff url(images/loading.gif) no-repeat center; }/* IMAGE: loading gif */
+
+#mbImage{ margin:0; padding:0; height:0; border:none; font-size:0; overflow:hidden; }
+
+.clear{ clear:both; height:0; margin:0; padding:0; font-size:0; overflow:hidden; }
+
+
+/* *** BOTTOM *** */
+
+#mbBottom { 
+	/* set text options 
+	font-family: Verdana, Arial, Geneva, Helvetica, sans-serif;
+	font-size: 10px;
+	color:#222;
+	line-height: 1.4em;*/
+	text-align: center;
+}
+
+/* navigation */
+/* be careful if you change buttons dimensions */
+
+#mbNavigation{
+	float:right;
+	width:27px;
+	padding-top:3px;
+	border-left:1px solid #545454;/* set nav border */
+}
+
+#mbCount{ 
+	text-align:right;
+}
+
+#mbCloseLink, #mbPrevLink, #mbNextLink, #mbPlayPause{
+	outline:none;
+	display:block;
+	float:right;
+	height:19px;
+	cursor: pointer;
+}
+
+#mbPrevLink, #mbNextLink, #mbPlayPause{ width:15px; }
+#mbPrevLink{ background: transparent url(images/prev.gif) no-repeat; }/* IMAGE: prev */
+#mbNextLink{ background: transparent url(images/next.gif) no-repeat; }/* IMAGE: next */
+#mbPlayPause{ background: transparent url(images/play-pause.gif) no-repeat; }/* IMAGE: play/pause */
+
+
+/* NOTE: doesn't work in ie6, so, just see the js options :) */
+a#mbPrevLink:hover,a#mbNextLink:hover,a#mbCloseLink:hover,a#mbPlayPause:hover { background-position: 0 -22px; }
+
+#mbCloseLink {
+	width:20px;
+	background: transparent url(images/close.gif) no-repeat;/* IMAGE: close */
+}
+
+/* description */
+
+#mbDescription{
+	margin-right:27px;
+	padding:10px 0 0 0;
+	font-size: 1.2em;
+	text-align:center;
+}
+
